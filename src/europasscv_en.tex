@@ -5,116 +5,189 @@
 \documentclass[english,a4paper]{europasscv}
 \usepackage[english]{babel}
 
-\ecvname{Betty Smith}
-\ecvaddress{32 Reading rd, Birmingham B26 3QJ United Kingdom}
-\ecvmobile{+44 555 123 555}
-\ecvtelephone{+44 127 6689}
-\ecvworkphone{+44 999 888 777}
-\ecvemail{smith@kotmail.com another@email.com}
-\ecvhomepage{www.myhomepage.com www.another-homepage.com}
-% \ecvgithubpage{www.github.com/smith}
-% \ecvlinkedinpage{www.linkedin.com/in/betty-smith}
-\ecvim{AOL Messenger}{betty.smith}
-\ecvim{Google Talk}{bsmith}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% new commands
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newcommand{\ecvbluetext}[1] {\textcolor{ecvsectioncolor}{#1}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ecvdateofbirth{1 March 1975}
-\ecvnationality{English}
-\ecvgender{Female}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% personal info
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\ecvname{Nicola Piga}
+\ecvaddress{Via Giunta Pisano 22, Pisa, Italy}
+\ecvmobile{+39 339 32 54 342}
+\ecvemail{nicolapiga@gmail.com}
+\ecvgithubpage{www.github.com/xenvre}
+\ecvlinkedinpage{www.linkedin.com/in/nicola-piga-73b91ab5}
+\ecvdateofbirth{28 March 1992}
+\ecvnationality{Italian}
+\ecvgender{Male}
+\ecvpicture[width=3.8cm]{picture.png}
 
-% \ecvpicture[width=3.8cm]{picture.jpg}
-% \ecvpictureright
-
-% \date{}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-  \begin{europasscv}
+\begin{europasscv}
 
   \ecvpersonalinfo
 
-  \ecvbigitem{Job applied for}{European project manager}
-
-  \ecvsection{Work experience}
-  
-  \ecvtitle{August 2002 -- Present}{Independent consultant}
-  \ecvitem{}{British Council\newline 123, Bd Ney, 75023 Paris (France)}
-  \ecvitem{}{Evaluation of European Commission youth training support measures for youth national agencies and young people}
-   
-  \ecvtitle{March 2002 -- July 2002}{Internship}
-  \ecvitem{}{European Commission, Youth Unit, DG Education and Culture \newline 200, Rue de la Loi, 1049 Brussels (Belgium)}
-  \ecvitem{}{
-  \begin{ecvitemize}
-      \item evaluating youth training programmes for SALTO UK and the partnership between the Council of Europe and European Commission
-      \item organizing and running a 2 day workshop on non-formal education for Action 5 large scale projects focusing on quality, assessment and recognition
-      \item contributing to the steering sroup on training and developing action plans on training for the next 3 years. Working on the Users Guide for training and the support measures
-  \end{ecvitemize}
-  }
-  \ecvitem{}{\ecvhighlight{Business or sector}\quad European institution}
-  
-  \ecvtitle{Oct 2001 -- Feb 2002}{Researcher / Independent Consultant}
-  \ecvitem{}{Council of Europe, Budapest (Hungary)}
-  \ecvitem{}{Working in a research team carrying out in-depth qualitative evaluation of the 2 year Advanced Training of Trainers in Europe using participant observations, in-depth interviews and focus groups. Work carried out in training courses in Strasbourg, Slovenia and Budapest.}
-  
-  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  % education and training
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
   \ecvsection{Education and training}
-  
-  \ecvtitlelevel{1997--2001}{PhD - Thesis Title: 'Young People in the Construction of the Virtual University’, Empirical research on e-learning}{ISCED~6}
-  \ecvitem{}{Brunel University, London United Kingdom}
-  
-  \ecvtitle{1993--1997}{Bachelor of Science in Sociology and Psychology}
-  \ecvitem{}{Brunel University, London United Kingdom
-      \begin{ecvitemize}
-	\item sociology of risk
-	\item sociology of scientific knowledge / information society
-	\item anthropology
-	\item E-learning and Psychology
-	\item research methods
-      \end{ecvitemize}
-  }
-  
-  \pagebreak
-  
+
+  \ecvtitle{Dec 2014 -- current}{Master in Robotics and Control Engineering}
+  \ecvitem{}{University of Pisa \href{https://www.unipi.it/}{[ www.unipi.it ]}}
+  \ecvblueitem[0pt]{Topics}{Mathematics (deterministic finite dimensional linear systems theory, probability),
+    Control Theory (robust control and identification of linear systems, control of nonlinear systems),
+    Modelling (aerospace systems, underwater systems, vehicles),
+    Robotics (robot kinematics, dynamics and control, distributed robotics),
+    Computer Science (real time systems),
+    Mechatronics.}
+
+  \ecvtitle{Sep 2011 -- Dec 2014}{Bachelor of Science in Computer Engineering}
+  \ecvitem{}{University of Pisa \href{https://www.unipi.it/}{[ www.unipi.it ]}}
+  \ecvblueitem[0pt]{Graduation Mark}{110/110 cum laude}
+  \ecvblueitem[0pt]{Thesis title}{Analysis of the reconstruction error in environmental monitoring via Compressive Sensing}
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  % personal skills
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
   \ecvsection{Personal skills}
-  \ecvmothertongue{English}
+
+  \ecvblueitem{Programming skills}{Languages: C++, Python}
+  \ecvitem{}{Libraries: Qt}
+  \ecvitem{}{Version control systems: Git}
+
+  \ecvblueitem{Robotics and Control skills}{Software: ROS, Gazebo}
+  \ecvitem{}{Systems: Industrial arms}
+  \ecvitem{}{Simulation: MATLAB, Simulink, Mathematica}
+
+  \ecvmothertongue{Italian}
   \ecvlanguageheader
-  \ecvlanguage{French}{C1}{C2}{B2}{C1}{C2}
-  \ecvlanguagecertificate{Diplôme d'études en langue française (DELF) B1}
-  \ecvlastlanguage{German}{A2}{A2}{A2}{A2}{A2}
+  \ecvlastlanguage{English}{B1}{B2}{B1}{B1}{B2}
   \ecvlanguagefooter
-   
-  \ecvblueitem{Communication skills}{
-  \begin{ecvitemize}
-    \item team work: I have worked in various types of teams from research teams to national league hockey. For 2 years I coached my university hockey team
-    \item mediating skills: I work on the borders between young people, youth trainers, youth policy and researchers, for example running a 3 day workshop at CoE Symposium ``Youth Actor of Social Change'', and my continued work on youth training programmes 
-    \item intercultural skills: I am experienced at working in a European dimension such as being a rapporteur at the CoE Budapest ``youth against violence seminar'' and working with refugees.
-  \end{ecvitemize}
-  }
-  
-  \ecvblueitem{Organisational / managerial skills}{
-  \begin{ecvitemize}
-    \item whilst working for a Brussels based refugee NGO ``Convivial'' I organized a ``Civil Dialogue'' between refugees and civil servants at the European Commission 20th June 2002
-    \item during my PhD I organised a seminar series on research methods
-  \end{ecvitemize}
+
+  \ecvblueitem{Driving licence}{Italian car driving license}
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \pagebreak
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  % didactic projects 
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  \ecvsection{Didactic projects}
+
+  \ecvblueitem{Jan 2017 -- Mar 2017}{\ecvbluetext{\emph{Hybrid Position/Force control of a Kuka LWR4+ manipulator} }}
+  \ecvblueitem[1pt]{Course}{Control of Robots}
+  \ecvitem{}{
+    Implementation of a hybrid position/force controller for a lightweight manipulator
+    equipped with a hand-like end-effector.The hybrid approach was used to exploit
+    hand-environment interactions, which are required to perform the grasp of thin objects,
+    in a safe way.
+    \par
+    The controller was developed using ROS (C++), simulated in Gazebo and tested
+    on a real manipulator. The system was provided with an operator GUI developed in Qt.
+    \par
+    video: \href{https://youtu.be/0tVq7SOc8s8}{https://youtu.be/0tVq7SOc8s8}
   }
 
-  \ecvdigitalcompetence{\ecvBasic}{\ecvIndependent}{\ecvProficient}{\ecvIndependent}{\ecvBasic}
-  
-  \ecvblueitem{Computer skills}{
-  \begin{ecvitemize}
-    \item competent with most Microsoft Office programmes
-    \item experience with HTML
-  \end{ecvitemize}
+  \ecvblueitem{Set 2016 -- Nov 2016}{\ecvbluetext{\emph{Robust Control of a Double Mass Spring Damper system} [simulation]}}
+  \ecvblueitem[1pt]{Course}{Identification and Control of Uncertain System}
+  \ecvitem{}{
+    Development of several control systems that regulate the position
+    of the second mass in response to a step input in presence of load disturbance,
+    measurement noise and parametric uncertainties.
+    \par
+    Several control techniques were used such as LQG/LTR, $\mathcal H_{\infty}$ and $\mu$  synthesis.
+    \par
+    Stability and performance robustness were tested using Matlab Robust Control Toolbox and
+    simulation was done using Simulink.
+  }
+
+  \ecvblueitem{May 2016 -- Jul 2016}{\ecvbluetext{\emph{Real Time simulation of flying 2D quadrotors in presence of noisy measurements}}}
+  \ecvblueitem[1pt]{Course}{Real Time Systems}
+  \ecvitem{}{
+    Real time simulation of several flying 2D quadrotors each equipped
+    with a LQG control system. The trajectory of each vehicle is random or can
+    be specified by the user.
+    \par
+    The software was written in C using the Pthreads library.
+    The GUI was done with the game programming library Allegro 4.
   }
   
-  
-  \ecvblueitem{Other skills}{Creating pieces of Art and visiting Modern Art galleries. Enjoy all sports particularly hockey, football and running. Love to travel and experience different cultures.}
+  \ecvblueitem{Jan 2016 -- Mar 2016}{\ecvbluetext{\emph{Cooperative Transport with iRobot Create 2 robots} [simulation]}}
+  \ecvblueitem[1pt]{Course}{Distributed Robotic Systems}
+  \ecvitem{}{
+    Development of a distributed system composed of three
+    wheeled robots which move a box to a given position cooperatively in a
+    space without constraints.
+    \par
+    Key concepts explored in the project are: point to point control of the robots, planning and obstacle
+    avoidance, online distributed estimation of the position of the box.
+    \par
+    The system was developed using ROS (Python) and simulated in Gazebo.
+  }
 
-  \ecvblueitem{Driving licence}{A, B}
-  
-  \ecvsection{Additional information}
-  
-  \ecvblueitem{Publications}{\textit{How to do Observations: Borrowing techniques from the Social Sciences to help Participants do Observations in Simulation Exercises}, Coyote EU/CoE Partnership Publication, (2002).
-}
-  
-  \end{europasscv}
+  \ecvblueitem{Jan 2015 -- Apr 2015}{\ecvbluetext{\emph{Measurement, transmission and representation of the attitude of a 3DOF mechanical system}}}
+  \ecvblueitem[1pt]{Course}{Mechatronics}
+  \ecvitem{}{
+    Implementation of the firmware for a WiFi enabled MCU that
+    acquires the signals from three encoders, representing
+    the attitude of a mechanical system, and send them via UDP.
+    \par
+    The system was provided with several tools: a web server, developed as a part
+    of the firmware, for the configuration and a standalone
+    GUI developed in Python to represent the attitude of the system.
+    \par
+    Firmware programming was done in C using the Broadcom WICED SDK.
+  }
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  % experiences 
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  \ecvsection{Experiences}
+  \ecvblueitem{Sep 2010 -- Nov 2010}{\ecvbluetext{\emph{Internship} at Connect.ie \href{http://www.connect.ie}{[ www.connect.ie ]}}}
+  \ecvitem{}{Development of websites for european projects.}
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  % personal interests 
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  \ecvsection{Personal interests}
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{europasscv}
 
 \end{document}
