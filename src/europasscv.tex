@@ -17,8 +17,8 @@
         {\href{mailto:gmazzamuto+ctan@gmail.com}{\texttt{gmazzamuto+ctan@gmail.com}}}\\}
 \title{ Documentation of the \LaTeX\ class\\
 		\Large{\textbf{\texttt{europasscv.cls}}}\\
-		\normalsize{\href{https://github.com/gmazzamuto/europasscv}{\texttt{https://github.com/gmazzamuto/europasscv}}}\\
-		\vspace{0.2cm} Version 2017-01-22
+		\normalsize{\href{https://www.devrandom.it/software/europasscv}{\texttt{https://www.devrandom.it/software/europasscv}}}\\
+		\vspace{0.2cm} Version 2019-01-14
 }
 
 \newcommand{\bs}{\textbackslash}
@@ -63,12 +63,14 @@ For a complete list of usable class options see section \ref{sec:classOptions}.
 \ecvtelephone{(+555) 555 555\newline}
 \ecvworkphone{(+555) 123 456}
 \ecvmobile{(+555) 340 123}
+\ecvaddress{rue Wiertz, B-1047 Brussels}
 \hypersetup{urlcolor=black}
 \ecvemail{smith@kotmail.com another@email.com}
 \ecvhomepage{www.myhomepage.com www.another.com}
 \ecvgithubpage{https://github.com/smith}
+\ecvgitlabpage{https://gitlab.com/smith}
 \ecvlinkedinpage{https://www.linkedin.com/in/smith}
-\ecvaddress{rue Wiertz, B-1047 Brussels}
+\ecvorcid[label, link]{0000-0000-0000-0000}
 \ecvim{AOL Messenger}{betty.smith}
 \ecvim{Google Talk}{bsmith}
 \ecvdateofbirth{1 January 1970}
@@ -95,7 +97,9 @@ The \emph{Personal information} section shown above is specified with the comman
 \ecvemail{smith@kotmail.com another@email.com}
 \ecvhomepage{www.myhomepage.com www.another.com}
 \ecvgithubpage{https://github.com/smith}
+\ecvgitlabpage{https://gitlab.com/smith}
 \ecvlinkedinpage{https://www.linkedin.com/in/smith}
+\ecvorcid[label, link]{0000-0000-0000-0000}
 \ecvim{AOL Messenger}{betty.smith}
 \ecvim{Google Talk}{bsmith}
 \ecvdateofbirth{1 January 1970}
@@ -106,14 +110,12 @@ and then typeset inside the \texttt{europasscv} environment with:
 \begin{description}
 \item[\texttt{\bs ecvpersonalinfo}]
 \end{description}
-A photo can be added with the command:
+Photos can be added with the following commands:
 \begin{description}
-\item[\texttt{\bs ecvpicture[\textit{options}]\{\textit{filename}\}}]
+\item[\texttt{\bs ecvpictureleft[\textit{options}]\{\textit{filename}\}}]
+\item[\texttt{\bs ecvpictureright[\textit{options}]\{\textit{filename}\}}]
 \end{description}
-The provided options are passed to \texttt{\bs includegraphics}. By default, the photo is placed to the left. To place it to the right, add the following command:
-\begin{description}
-\item[\texttt{\bs ecvpictureright}]
-\end{description}
+where options are passed to \texttt{\bs includegraphics}. The command \texttt{\bs ecvpicture} is an alias for \texttt{\bs ecvpictureleft}.
 
 \hypersetup{urlcolor=magenta}
 
@@ -131,8 +133,7 @@ Use the following simple commands to add items and sections to your CV:\\
 
     \ecvsection{ecvsection}
     \ecvtitle{apr 2012 -- apr 2014}{ecvtitle}
-    \ecvitem{}{ecvitem: this is the standard CV item}
-    \ecvitem{}{ecvitem with some \ecvhighlight{highlighted} text}
+    \ecvitem{}{ecvitem: this is the standard CV item. This is some \ecvhighlight{highlighted} text.}
     \ecvitem{ecvitemize}{
     \begin{ecvitemize}
 	\item this is a list item
@@ -143,7 +144,7 @@ Use the following simple commands to add items and sections to your CV:\\
 	    \end{ecvitemize}
     \end{ecvitemize}
     }
-    \ecvblueitem[-5pt]{blue left text}{ecvblueitem}
+    \ecvblueitem{blue left text}{ecvblueitem}
     \ecvtitlelevel{apr 2012 -- apr 2014}{ecvtitlelevel}{ISCED 6}
     \ecvitem{ecvitem}{Item description}
     \ecvitem{ecvitem}{\ecvhighlightcell{highlighted cell}}
@@ -181,6 +182,7 @@ Finally, if you want to put lists in one CV entry, use the \texttt{ecvitemize} a
   \end{ecvitemize}
 }
 \end{verbatim}
+\enlargethispage{\baselineskip}
 
 
 \subsection{Language skills}
@@ -243,6 +245,22 @@ In the following, an example code snippet and the resulting CV entry is presente
 \end{minipage}
 
 \section{Advanced usage}
+\subsection{Bibliography}
+Printing bibliography using \texttt{biblatex} is supported. Please refer to the provided source file for a working example of how to integrate \texttt{biblatex} with \texttt{europasscv}. Basically, in your preamble you need to use the \texttt{biblatex} package followed by
+\begin{verbatim}
+\usepackage{europasscv-bibliography}
+\end{verbatim}
+and then you can specify the bibliography source file as usual.
+
+To print the bibliography, use the following commands:
+\begin{verbatim}
+  \renewcommand{\section}[2]{\ecvsection{#2}}
+  \printbibtabular[title=Publications]
+\end{verbatim}
+where the first command is used to specify which kind of heading you want to use for the bibliography section. Finally, the following commands are defined in the \texttt{europasscv-bibliography} package:
+\begin{description}
+ \item[\texttt{\bs ecvbibhighlight\{\textit{last name}\}\{\textit{first name}\}\{\textit{first name initial}\}}] mark the given name to be highlighted in bold in the bibliography
+\end{description}
 
 \subsection{Class options}
 \label{sec:classOptions}
@@ -267,7 +285,7 @@ If you want to use the hyphenation patterns for the language(s) of your choice, 
 % The use of \textsf{babel} is mandatory for Greek (see the Greek language option above).
 
 The following language options are currently supported:
-\texttt{danish}, \texttt{english}, \texttt{czech}, \texttt{french}, \texttt{german}, \texttt{greek}\footnote{Requires \XeLaTeX or \LuaLaTeX.}, \texttt{hungarian}, \texttt{italian}, \texttt{polish}, \texttt{portuguese}, \texttt{slo\-venian}, \texttt{spanish}.
+\texttt{catalan}, \texttt{danish}, \texttt{english}, \texttt{czech}, \texttt{french}, \texttt{german}, \texttt{greek}\footnote{Requires \XeLaTeX\ or \LuaLaTeX.}, \texttt{hungarian}, \texttt{italian}, \texttt{norsk} (Norwegian Bokmål), \texttt{polish}, \texttt{portuguese}, \texttt{slo\-venian}, \texttt{spanish}.
 
 If you need a different language, you must create a new \texttt{.def} file and add the corresponding \texttt{\textbackslash DeclareOption} in the class file. Please contribute your \texttt{.def} files so that they can be included in future updates. The \texttt{.def} files in the \texttt{europecv}\footnote{\url{http://ctan.org/pkg/europecv}} package are a good starting point.
 
@@ -325,7 +343,7 @@ Europass and the Europass logo are copyright of the European Union.\footnote{See
 \section{Acknowledgements}
 Special thanks to \LaTeX\ enthusiast Francesco Biccari whom I had the pleasure to meet at LENS in Sesto Fiorentino and who provided useful comments and suggestions.
 
-The following people contributed language definition files: Peter Fink (German); Nuno Vieira (Portuguese), Henry Ajquejay, Gast\'{o}n Simone and Pablo Rodriguez (Spanish); Ale\v s Zadravec (Slovenian); Jan Koprnick\'{y} (Czech); Lennart Jern (Swedish), Daniel Østergaard Andreasen (Danish).
+The following people contributed language definition files: Peter Fink (German); Nuno Vieira (Portuguese), Henry Ajquejay, Gast\'{o}n Simone and Pablo Rodriguez (Spanish); Ale\v s Zadravec (Slovenian); Jan Koprnick\'{y} (Czech); Lennart Jern (Swedish), Daniel Østergaard Andreasen (Danish), Roger Bassons Renart (Catalan).
 
 The following people contributed code changes: Stanley Foerster, Andrzej \'{S}liwi\'{n}ski
 \end{document}
