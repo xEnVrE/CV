@@ -10,31 +10,36 @@
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{green}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%% \renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\AtBeginDocument{\settowidth{\hintscolumnwidth}{XXXXXXX}}
+
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{John}{Doe}
-\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
-\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
-\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\name{Nicola A.}{Piga}
+%% \title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{Via S. Quirico, 19d}{16163, Genova, Italy}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+39~339~325~4342}                   % optional, remove / comment the line if not wanted
+%% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{nicola.piga@iit.it}                               % optional, remove / comment the line if not wanted
+%% \email{nicola.piga@iit.it}                         % optional, remove / comment the line if not wanted
+%% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[84pt][0.0pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\social[linkedin][www.linkedin.com/in/nicola-piga-73b91ab5/?locale=en_US]{nicola-piga-73b91ab5}
+\social[github][www.github.com/xEnVrE]{xEnVrE}
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -53,25 +58,81 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\section{\textbf{Current Position}}
+\cventry{November, 2018 - current}{PhD student @ Humanoid Sensing and Perception (Istituto Italiano di Tecnologia)}{Istituto Italiano di Tecnologia}{Genova}{}{I am a PhD student in Advanced and Humanoid Robotics at the Humanoid Sensing and Perception research line at Istituto Italiano di Tecnologia in Genova. My current research goal is to improve \emph{perception} capabilities of humandoid robots by combining visual and tactile measurements within object tracking algorithms. Part of my work is dedicated to the development of these algorithms in \texttt{C++} and their testing on the iCub humanoid platform. \newline{}% Detailed achievements:%
+}
 
-\section{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
+
+\section{\textbf{Skills}}
+\cventry{Software}{Programming languages}{}{\texttt{C++} (experienced), Python (prior experience), MATLAB (prior experience), HTML (prior experience).}{}{}  % arguments 3 to 6 can be left empty
+\cventry{}{Libraries}{}{Eigen (experienced), VCG (experienced), VTK (experienced), YARP (expert), OpenCV (basic knowledge).}{}{}  % arguments 3 to 6 can be left empty
+\cventry{}{Simulators}{}{Gazebo (experienced).}{}{}
+\cventry{}{Tools}{}{Emacs (experienced), Meshlab (basic knowledge).}{}{}
+\cventry{}{OS}{}{Linux (experienced), Windows (basic knowledge).}{}{}
+\cventry{}{Build systems}{}{CMake (basic knowledge).}{}{}
+\cventry{}{Version control systems}{}{Git (experienced).}{}{}
+\vspace{3mm}
+\cventry{Hardware}{Robots}{}{iCub humanoid platform (expert), industrial arms (prior experience).}{}{}
+\vspace{3mm}
+\cventry{Soft skills}{Work-related}{}{Problem solving, Teamwork, Leadership, Motivation.}{}{}
+\cventry{}{Languages}{}{English (independent user), Italian (mother tounge).}{}{}
+
+\section{\textbf{Achievements}}
+
+\section{\textbf{Past Experience}}
+\cventry{September, 2010 - November, 2010}{Internship at \href{http://www.connect.ie}{Connect.ie}}{Università di Pisa}{Pisa, Italy.}{}{}
+
+\section{\textbf{Papers}}
+
+\section{\textbf{Education}}
+\cventry{December, 2014 - September, 2018}{M. Sc. with full honours in Robotics and Automation Engineering}{Università di Pisa}{Pisa, Italy.}{}{}
+\vspace{-10mm}
+\subsection{{\normalsize M. Sc. Thesis ``Object localization using vision and touch:
+  experiments on the iCub humanoid robot''}}
+\vspace{-5mm}
+\cventry{}{}{}{}{}{I developed a filtering algorithm for object localization that uses visual and tactile information in the form of Cartesian points belonging to the surface of the object. To this end, I extended the state-of-the-art Memory Unscented Particle Filter algorithm for tactile localization of a stationary object in order to localize an object using visual measurements, in the form of point clouds, and track its pose using tactile measurements while the object is manipulated by an external end-effector. The algorithm was tested in simulation using the Gazebo simulator and on the iCub humanoid robot using its stereo vision and tactile sensing system.}
+
+\vspace{3mm}
+\subsection{{\normalsize M. Sc. Projects:}}
+%% \vspace{-5mm}
+\cventry{}{}{}{}{}{{}% Detailed achievements:%
+\vspace{-8mm}
+\begin{itemize}%
+\item ``Design and implementation of an Auto-Ranging mechanism for the DecaWave EVB1000 indoor localization system''.
+  \vspace{2mm}
+\item ``Design and implementation of a hybrid position/force controller for a the KUKA LWR4\texttt{+} manipulator equipped with a Pisa/IIT SoftHand in order to grasp thin objects exploiting safe hand-environment interactions''.
+\item[] Video: \href{https://youtu.be/0tVq7SOc8s8}{https://youtu.be/0tVq7SOc8s8}.
+\item[] \texttt{C++} implementation: \href{https://git.io/vdVYE}{https://git.io/vdVYE}.
+  \vspace{2mm}
+\item ``Robust Control of a Double Mass Spring Damper system''.
+  \vspace{2mm}
+\item ``Real time simulation of several flying 2D quadrotors each controlled along a user-defined trajectory using a LQG control system''.
+  \vspace{2mm}  
+\item ``Simultaneous cooperative object localization and transport with several iRobot Create 2 robots in the Gazebo simulator''.
+\item[] Python implementation: \href{https://git.io/v9KMv}{https://git.io/v9KMv}
+  \vspace{2mm}  
+\item ``Measurement, transmission and representation of the attitude of a 3DoF mechanical system''.
+\end{itemize}}
+
+\vspace{5mm}
+\cventry{September, 2011 - December, 2014}{B. Sc. with full honours in Computer Engineering}{Università di Pisa}{Pisa, Italy.}{}{}
+\vspace{-15mm}
+\subsection{{\normalsize B. Sc. Thesis ``Analysis of the reconstruction error in environmental monitoring via Compressive Sensing''}}
+\vspace{-5mm}
+\cventry{}{}{}{}{}{I implemented a Compressive Sensing algorithm for the collection of environmental data and I carried out an analysis in order to compare the reconstruction error obtained with standard Nyquist based sampling techniques. The algorithm was tested with real measurements acquired using an Autonomous Weather Station.}
+
 
 \section{Experience}
 \subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
+\cventry{year--year}{Job title}{Employer}{City}{}{General description
+  no longer than 1--2 lines.\newline{}% Detailed achievements:%
 \begin{itemize}%
 \item Achievement 1;
 \item Achievement 2, with sub-achievements:
   \begin{itemize}%
   \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+  \item Sub-achievement (b), with sub-sub-achievements (don't do
+    this!);
     \begin{itemize}
     \item Sub-sub-achievement i;
     \item Sub-sub-achievement ii;
